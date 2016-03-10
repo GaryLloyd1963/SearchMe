@@ -11,8 +11,8 @@
                 <h3>Click a preset search button, or type in your custom search phrase</h3>
             </div>
             <p>
-                <button type="button" class="btn btn-lg btn-primary">James Bond</button>
-                <button type="button" class="btn btn-lg btn-warning">Star Wars</button>
+                <button type="button" class="btn btn-lg btn-primary" ng-click="callSearchResultsService('James Bond')">James Bond</button>
+                <button type="button" class="btn btn-lg btn-warning" ng-click="callSearchResultsService('Star Wars')">Star Wars</button>
             </p>
             <p>
                 <input class="form-control input-lg" id="inputlg" type="text" name="searchPhrase" ng-model="searchPhrase" ng-change="searchPhraseChange()"

@@ -16,8 +16,10 @@ theApp.controller('searchMeController', ['$scope','$timeout','searchMeService', 
         $scope.keyPressTimeout = $timeout($scope.callSearchResultsService, 1000);
     }
 
-    $scope.callSearchResultsService = function() {
-        $scope.searchResults = searchMeService.getSearchResults($scope.searchPhrase);
+    $scope.callSearchResultsService = function(phrase) {
+        if (!phrase)
+            phrase = $scope.searchPhrase;
+        $scope.searchResults = searchMeService.getSearchResults(phrase);
         if ( ($scope.searchResults === null) || ($scope.searchResults.count === 0)) {
             $scope.searchResponse = "No search results found for " + $scope.searchPhrase;
             return;
