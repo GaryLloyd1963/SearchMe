@@ -1,7 +1,6 @@
 'use strict';
 
-var app = angular.module('searchMeApp',[]);
-app.controller('searchMeController', ['$scope','$timeout','searchMeService', function($scope, $timeout, searchMeService) {
+theApp.controller('searchMeController', ['$scope','$timeout','searchMeService', function($scope, $timeout, searchMeService) {
     $scope.searchResponse = "No results so far";
     $scope.searchResults = [];
     $scope.keyPressTimeout = {};
@@ -9,9 +8,7 @@ app.controller('searchMeController', ['$scope','$timeout','searchMeService', fun
 
     $scope.searchPhraseChange = function() {
         $timeout.cancel($scope.keyPressTimeout);
-        console.log('Search phrase changed '+$scope.searchPhrase);
         if ( $scope.searchPhrase == undefined || ($scope.searchPhrase.length < 3)) {
-            console.log('Search phrase short');
             $scope.searchResponse = "Not results yet.";
             $scope.searchResults = [];
             return;
