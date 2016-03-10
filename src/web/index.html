@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="garfy70.ico">
+
+    <title>Search Me AngularJS demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="app/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="app/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body role="document" ng-app="theApp">
+    <div ng-include src="'app/search-me/templates/search-me.html'"></div>
+    <div class="container theme-showcase">
+      <div class="page-header">
+        <h2>About This</h2>
+      </div>
+      <div class="well">
+        <p>This is an example AngularJS 1.x app which uses an object factory to inject a search
+            service into a controller. A timer is used to monitor the user typing into the search
+            box, when a pause happens the search service is triggered.
+        </p>
+      </div>
+    </div> <!-- /container -->
+   
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="app/bower_components/angular/angular.js"></script>
+    
+    <!-- Angular apps -->  
+    <script src="app/app.js"></script>
+    <script src="app/search-me/controllers/search-me-controller.js"></script>
+    <script src="app/search-me/services/search-me-service.js"></script>
+    <script src="app/search-me/directives/select-on-click.js"></script>
+  </body>
+</html>
