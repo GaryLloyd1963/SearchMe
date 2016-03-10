@@ -2,7 +2,7 @@
 A Bootstrap and AngularJS search application (demonstrating a fake search service)
 
 ##To Run
-> Prequesites may include npm which is available when installaing node from https://nodejs.org/en/
+> Prequesites may include npm which is available when installing node from https://nodejs.org/en/
 
 - Clone from Git.
 - Install a lightweight test server (if you don't have one)
